@@ -1,0 +1,107 @@
+.command-type-selector {
+    position: relative;
+    display: inline-block;
+}
+
+.command-type-selector .dropbtn {
+    background: transparent;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+}
+
+.command-type-selector .dropbtn:hover, .dropbtn:focus {
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f900;
+    min-width: 600px;
+    padding: 12px 16px;
+    z-index: 1500; /* Match portal z-index */
+    transform-origin: top;
+    font-size: 16px;
+}
+
+.dropdown-content.show {
+    display: block;
+    transform: scaleY(0);
+    animation: expandY 0.3s forwards;
+}
+
+.dropdown-content .each-menu {
+    background-color: var(--white);
+    border-radius: 15px;
+    box-shadow: 0 5px 5px rgb(128, 128, 128);
+    margin: 0 0 10px 0;
+    padding: 5px;
+}
+
+.dropdown-content .each-menu .header-group {
+    text-align: center;
+}
+
+.dropdown-content .each-menu .content-group {
+    position: relative;
+    padding: 2px 4px;
+}
+
+.dropdown-content .each-menu .each-section-content {
+    height: 30px;
+    overflow: hidden;
+    padding: 6px 8px;
+    transition: background-color 0.3s;
+    cursor: pointer;
+    width: 100%;
+}
+
+.dropdown-content .each-menu .each-section-content:hover {
+    background-color: rgb(194, 194, 194);
+}
+
+.dropdown-content .each-menu p {
+    margin: 5px;
+}
+
+.dropdown-content .each-menu .each-section-content p {
+    line-height: normal;
+    margin: 0;
+}
+
+.dropdown-content .each-menu .each-section-content .favorite-btn {
+    position: absolute;
+    left: 100%;
+    transform: scaleX(0);
+    background: var(--white);
+    border: 1px solid var(--black);
+    box-shadow: 0 3px 3px rgb(196, 196, 196);
+    transform-origin: left;
+    z-index: 3;
+    transition: transform 0.3s ease;
+}
+
+.dropdown-content .each-menu .each-section-content .favorite-btn.favorited {
+    background: #ffcdcd;
+}
+
+/* Show the button on hover of parent or button itself */
+.dropdown-content .each-menu .each-section-content:hover .favorite-btn {
+    transform: scaleX(1);
+}
+
+/* Keep button visible when hovering the button itself */
+.dropdown-content .each-menu .each-section-content .favorite-btn:hover {
+    transform: scaleX(1);
+}
+
+.dropdown-content .each-menu .each-section-content .icon-group {
+    position: absolute;
+    right: 8px;
+}
+
+/* Keyframes remain global */
+@keyframes expandY {
+    from { transform: scaleY(0); }
+    to { transform: scaleY(1); }
+}

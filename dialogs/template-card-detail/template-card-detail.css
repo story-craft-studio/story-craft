@@ -1,0 +1,16 @@
+.template-card-detail {
+	position: relative;
+}
+
+.template-card-detail-arrow {
+	animation: pointAnimation 1s infinite alternate ease-in-out;
+}
+
+@keyframes pointAnimation {
+	0% {
+		transform: translateX(0) translateY(-50%);
+	}
+	100% {
+		transform: translateX(10px) translateY(-50%);
+	}
+} 

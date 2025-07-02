@@ -1,0 +1,68 @@
+.selectable-card.each-passage-card {
+    position: relative;
+    border-radius: 8px;
+    border: 3px solid transparent;
+
+    transition: transform 0.35s;
+}
+
+.selectable-card.each-passage-card:hover {
+    transform: scale(1.25, 1.25);
+    cursor: none;
+}
+.selectable-card.each-passage-card .card {
+    transition: border-radius 0.35s;
+}
+.selectable-card.each-passage-card .card:hover {
+    border-radius: 25px;
+}
+.selectable-card.each-passage-card.selected:hover {
+    transform: none;
+    cursor: pointer;
+}
+.selectable-card.each-passage-card.selected .card:hover {
+    border-radius: 5px;
+}
+.selectable-card.each-passage-card.selected {
+    border: 3px solid var(--blue);
+    border-radius: 8px;
+}
+
+@property --selected-card-border-angle {
+    syntax: "<angle>";
+    inherits: true;
+    initial-value: 0turn;
+}
+
+@keyframes spin {
+    to {
+        --selected-card-border-angle: 1turn;
+    }
+}
+
+
+.selectable-card .card {
+    background: var(--white);
+}
+
+/* Don't override passage background colors for selected cards */
+.selectable-card.selected .card {
+    box-shadow: var(--shadow-small), inset 0 0 0 2px var(--blue);
+}
+
+.selectable-card.selected .card.highlighted {
+    background: color-mix(in lch, var(--passage-color, var(--light-blue)), var(--light-yellow));
+}
+
+/* Dark mode styles for selectable cards */
+[data-app-theme='dark'] .selectable-card .card {
+    background: var(--faint-gray);
+}
+
+[data-app-theme='dark'] .selectable-card.selected .card {
+    box-shadow: var(--shadow-small), inset 0 0 0 2px var(--blue);
+}
+
+[data-app-theme='dark'] .selectable-card.selected .card.highlighted {
+    background: color-mix(in lch, var(--passage-color, var(--light-blue)), var(--light-yellow));
+}

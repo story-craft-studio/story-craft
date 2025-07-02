@@ -1,0 +1,154 @@
+@import '../../../styles/colors.css';
+@import '../../../styles/depth.css';
+@import '../../../styles/metrics.css';
+@import '../../../styles/typography.css';
+
+.passage-command-area {
+	display: flex;
+	flex-direction: column;
+}
+
+.passage-command-area > label {
+	display: block;
+	margin-bottom: var(--control-inner-padding);
+}
+
+.passage-command-area .react-codemirror2 {
+	flex: 1;
+	position: relative;
+	height: 100%;
+}
+
+.passage-command-area .changeBackground .react-codemirror2{
+	height: 60px;
+}
+.passage-command-area .delay .react-codemirror2{
+	height: 50px;
+}
+
+.passage-command-area:last-child {
+ margin-bottom: 100px;
+}
+
+.passage-command-area .CodeMirror, .passage-command-area textarea.visible {
+	background: var(--white-translucent);
+	border-radius: var(--corner-round);
+	border: 1px solid var(--faint-gray);
+	color: var(--dark-gray);
+	font-family: inherit;
+	height: 100%;
+	left: 0;
+	padding: calc(var(--grid-size) / 2);
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+.passage-command-area textarea.visible {
+	padding: var(--grid-size);
+	/* Undo absolute positiong above. */
+	position: static;
+	resize: none;
+}
+
+/* See https://codemirror.net/doc/manual.html#styling */
+
+.passage-command-area .CodeMirror-placeholder.CodeMirror-line-like {
+	color: var(--gray);
+	font-style: italic;
+}
+
+.passage-command-area .CodeMirror-cursor {
+	border-left: 2px solid var(--blue);
+}
+
+.passage-command-area .CodeMirror-selected {
+	background: var(--light-blue-translucent);
+}
+
+.CodeMirror-hints {
+	background: var(--off-white);
+	box-shadow: var(--shadow-large);
+	border: none;
+	font: 100% var(--font-ui);
+	padding: 0;
+}
+
+.CodeMirror-hint {
+	color: var(--dark-gray);
+	padding: var(--control-inner-padding);
+}
+
+li.CodeMirror-hint-active {
+	background: var(--light-blue);
+	color: var(--dark-gray);
+}
+
+/* Drag and drop styles */
+.draggable-item {
+  cursor: default;
+  position: relative;
+  transition: all 0.2s ease;
+  padding-left: 32px; /* Make room for the drag handle */
+  margin-left: -20px; /* Compensate for the padding to align with other elements */
+}
+
+.draggable-item:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.draggable-item.dragging {
+  cursor: grabbing;
+  z-index: 10;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.drag-handle {
+  width: 26px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: grab;
+  color: #444;
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: opacity 0.2s ease, color 0.2s ease;
+  border-radius: 3px;
+  padding: 0 2px;
+}
+
+.drag-handle::before {
+  content: "≡";
+  font-size: 24px;
+  line-height: 20px;
+  font-weight: bold;
+}
+
+.draggable-item:hover .drag-handle {
+  opacity: 0.9;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.drag-handle:hover {
+  color: #000;
+  background-color: rgba(0, 0, 0, 0.1);
+  opacity: 1;
+}
+
+/* Global styles for active dragging */
+body.dragging-active {
+  cursor: grabbing;
+}
+
+body.dragging-active .draggable-item:not(.dragging) {
+  transition: transform 200ms ease;
+}
+
+body.dragging-active .draggable-item:not(.dragging):hover {
+  transform: translateY(2px);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
+}

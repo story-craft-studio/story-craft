@@ -1,0 +1,36 @@
+@import '../../styles/colors.css';
+@import '../../styles/metrics.css';
+
+.main-content {
+	background: var(--off-white) var(--main-bg-image);
+	background-size: cover;
+	min-height: calc(100vh - 2 * var(--control-height));
+	overflow: auto;
+	position: fixed;
+	/* height of <top-bar> */
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.main-content > * {
+	position: relative; /* Ensure children respect padding */
+}
+
+.main-content.padded {
+	padding: var(--ui-gap);
+}
+
+.main-content-grab-listener {
+	cursor: grab;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 99999;
+}
+
+.main-content-grab-listener.grabbing {
+	cursor: grabbing;
+}

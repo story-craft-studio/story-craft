@@ -1,0 +1,9 @@
+.PreviewImageDialog {
+    width: 100%;
+}
+
+.PreviewImageDialog img {
+    width: 100%;
+    max-width: 80vw;
+    max-height: 80vh;
+}

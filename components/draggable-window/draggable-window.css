@@ -1,0 +1,74 @@
+.draggable-window {
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 9999;
+	background-color: #fff;
+	border-radius: 8px;
+	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	resize: both;
+	will-change: transform;
+	transform: translate(0, 0);
+	transition: box-shadow 0.2s ease;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.draggable-window-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #f5f5f5;
+	padding: 12px 16px;
+	cursor: move;
+	user-select: none;
+	border-bottom: 1px solid #e0e0e0;
+	touch-action: none;
+	-webkit-user-drag: none;
+}
+
+.draggable-window-title {
+	font-weight: bold;
+	font-size: 16px;
+	margin: 0;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	max-width: 80%;
+}
+
+.draggable-window-close {
+	background: transparent;
+	border: none;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 32px;
+	height: 32px;
+	border-radius: 50%;
+	transition: background-color 0.2s ease;
+	flex-shrink: 0;
+}
+
+.draggable-window-close:hover {
+	background-color: rgba(0, 0, 0, 0.05);
+}
+
+.draggable-window-body {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+}
+
+.draggable-window.dragging {
+	opacity: 0.95;
+	box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+	pointer-events: none;
+	transition: none;
+	cursor: grabbing;
+} 

@@ -1,0 +1,9 @@
+.CustomCommandBlock {
+
+}
+
+.CustomCommandBlock .code-mirror {
+	min-height: 200px;
+	max-height: 400px;
+	overflow-y: auto;
+}

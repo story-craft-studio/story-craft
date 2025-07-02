@@ -1,0 +1,69 @@
+@import '../../styles/colors.css';
+@import '../../styles/metrics.css';
+
+.story-list-main-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.story-list-main-content h1 {
+  width: 100%;
+  margin-bottom: 20px;
+  flex-shrink: 0;
+}
+
+.story-list-main-content .stories {
+  position: relative;
+  flex: 1;
+  width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-height: calc(100vh - 120px);
+  padding-right: 8px;
+}
+
+/* Custom scrollbar styling */
+.story-list-main-content .stories::-webkit-scrollbar {
+  width: 8px;
+}
+
+.story-list-main-content .stories::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+
+.story-list-main-content .stories::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+}
+
+.story-list-main-content .stories::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* Safari warning card should be positioned correctly */
+.story-list-main-content .safari-warning-card {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .story-list-main-content {
+    padding-top: 180px; /* Smaller padding for smaller screens */
+  }
+  
+  .story-list-main-content .stories {
+    max-height: calc(100vh - 220px);
+  }
+}
+
+@media (max-width: 600px) {
+  .story-list-main-content {
+    padding-top: 150px; /* Even smaller padding for mobile */
+  }
+  
+  .story-list-main-content .stories {
+    max-height: calc(100vh - 180px);
+  }
+} 

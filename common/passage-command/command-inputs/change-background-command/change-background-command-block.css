@@ -1,0 +1,23 @@
+.ChangeBackgroundCommandBlock .search-icon-container {
+    background: #2060d7;
+    border-radius: 4px;
+    width: 34px;
+    height: 34px;
+    margin: 5px;
+}
+
+.ChangeBackgroundCommandBlock .preview-image-container {
+    border: 2px #000000 solid;
+    border-radius: 4px;
+    width: 34px;
+    height: 34px;
+    margin: 5px;
+    z-index: 1;
+}
+
+
+.ChangeBackgroundCommandBlock .preview-image-container img {
+    width: 30px;
+    height: 30px;
+}
+

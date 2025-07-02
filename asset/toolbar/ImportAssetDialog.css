@@ -1,0 +1,28 @@
+.import-asset-dialog {
+}
+
+.import-asset-dialog  .parameter__type {
+    color: #343434;
+    font-style: italic;
+}
+
+
+.import-asset-dialog .parameters-col_description > div {
+    margin-left: 20px;
+}
+
+.import-asset-dialog .input-container {
+    margin-bottom: 15px;
+}
+
+
+.import-asset-dialog .MuiInputBase-root,
+.import-asset-dialog input:not([type="file"]) {
+    width: 220px;
+    height: 30px;
+}
+
+.import-asset-dialog input[type="file"] {
+    width: 200px;
+}
+

@@ -1,0 +1,75 @@
+@import '../../../styles/colors.css';
+@import '../../../styles/metrics.css';
+
+.create-story-button-container {
+    position: relative;
+    top: 10px;
+    left: 24px;
+    z-index: 1;
+    background: none;
+}
+
+.create-story-button-gradient {
+    position: relative;
+    width: 300px;
+    height: 80px;
+    background: linear-gradient(135deg,
+    #E1FFBB 0%, #009990 50%, #074799 75%, #001A6E 100%);
+    border-radius: 85px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.create-story-button-inner {
+    position: absolute;
+    top: 12px;
+    left: 10px;
+    right: 10px;
+    bottom: 12px;
+    background: white;
+    border-radius: 85px;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    gap: 12px;
+    box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.25);
+    transition: all 0.3s ease;
+}
+
+.create-story-icon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #8d8d8d;
+    flex-shrink: 0;
+}
+
+.create-story-icon svg {
+    width: 40px;
+    height: 40px;
+}
+
+.create-story-text {
+    font-size: 32px;
+    font-weight: 400;
+    color: #707070;
+    white-space: nowrap;
+    line-height: 1;
+}
+
+.create-story-loading {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    color: #707070;
+}
+
+.create-story-button-gradient:hover {
+    transform: translateY(-2px);
+}
+
+.create-story-button-gradient:hover .create-story-button-inner {
+    box-shadow: 3px 7px 8px rgba(0, 0, 0, 0.3);
+}

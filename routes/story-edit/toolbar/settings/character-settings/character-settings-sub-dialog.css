@@ -1,0 +1,55 @@
+.character-settings-sub-dialog {
+    background-color: aliceblue;
+}
+
+.character-settings-sub-dialog .search-icon-container {
+    background: #ffffff;
+    border-radius: 4px;
+    width: 34px;
+    height: 34px;
+    margin: auto 15px auto 0;
+}
+
+.character-settings-sub-dialog .MuiInputBase-input {
+    /*it might seem small, but the padding already create much of the space, so it wont look as small*/
+    height: 2px;
+    font-size: 0.8rem;
+}
+
+.character-settings-sub-dialog .img-button-container {
+    opacity: 1;
+    transition: opacity 0.5s;
+    /* animation: flash-weak 3s ease-in infinite forwards; */
+}
+
+@keyframes flash-weak {
+    0% {
+        opacity: 1;
+    }
+    45% {
+        opacity: 1;
+    }
+    60% {
+        opacity: 0.25;
+    }
+    75% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.character-settings-sub-dialog .img-button-container:hover {
+    animation: fadeIn 0.7s ease-in forwards;
+}
+
+@keyframes fadeIn {
+    100% {
+        opacity: 1;
+    }
+}
+
+.character-settings-sub-dialog .img-button-container:hover button {
+    background: rgba(255, 255, 255, 0.9);
+}

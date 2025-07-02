@@ -1,0 +1,50 @@
+@import '../../../styles/colors.css';
+@import '../../../styles/metrics.css';
+
+.toggle-icon-button {
+  border-radius: var(--control-height * 0.75);
+  padding: calc(var(--grid-size) * 0.5) calc(var(--grid-size) * 1.5);
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  cursor: pointer;
+  position: relative;
+  z-index: 1; /* Ensure it's above other elements */
+  pointer-events: auto; /* Ensure pointer events are enabled */
+  font-size: 0.85rem;
+  line-height: 1;
+}
+
+.toggle-icon-button.variant-primary {
+  border-color: var(--blue);
+}
+
+.toggle-icon-button.variant-primary:hover:not(:disabled) {
+  background: var(--blue);
+  color: white;
+}
+
+.toggle-icon-button.variant-danger {
+  border-color: var(--dark-red);
+}
+
+.toggle-icon-button.variant-danger:hover:not(:disabled) {
+  background: var(--red);
+  color: white;
+}
+
+.toggle-icon-button .icon img,
+.toggle-icon-button .icon svg {
+  height: 16px;
+  width: 16px;
+  margin-right: calc(var(--grid-size) * 0.5);
+}
+
+/* Add visual feedback on press */
+.toggle-icon-button:active:not(:disabled) {
+  opacity: 0.8;
+  transform: scale(0.98);
+}
+
+.toggle-icon-button .button-label {
+  padding-top: 1px;
+} 

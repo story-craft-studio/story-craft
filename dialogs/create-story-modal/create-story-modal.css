@@ -1,0 +1,62 @@
+.create-story-modal {
+	font-family: var(--font-system);
+}
+
+.template-card-loading {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: rgba(255, 255, 255, 0.8);
+	z-index: 10;
+	border-radius: 20px;
+	box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+}
+
+.template-card-loading span {
+	margin-top: 8px;
+	font-size: 14px;
+	color: #333;
+}
+
+/* Modal Paper shadow */
+.create-story-modal .MuiPaper-root {
+	box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18), 0 1.5px 8px 0 rgba(60, 60, 60, 0.10);
+	border-radius: 20px;
+	background: #fff;
+}
+
+/* Template card shadow */
+
+
+/* Animation for the top story tag */
+@keyframes pulse {
+	0% {
+		transform: scale(1);
+	}
+
+	50% {
+		transform: scale(1.05);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}
+
+.top-story-tag {
+	animation: pulse 2s infinite ease-in-out;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+	.create-story-modal .MuiPaper-root {
+		width: 90%;
+		padding: 16px;
+	}
+}

@@ -1,0 +1,63 @@
+@import '../../../../styles/colors.css';
+@import '../../../../styles/depth.css';
+@import '../../../../styles/metrics.css';
+
+.favorite-btn {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 8px;
+    border-radius: 16px;
+    background: var(--white);
+    box-shadow: var(--shadow-small);
+    color: var(--dark-gray);
+    cursor: pointer;
+    border: none;
+    outline: none;
+    font: inherit;
+    margin: 0;
+    /* Remove transform transition to prevent flickering */
+    /* Ensure button is above other elements */
+    position: relative;
+    z-index: 2;
+    /* Add isolation to create a new stacking context */
+    isolation: isolate;
+}
+
+/* Use opacity for hover effect instead of transform */
+.favorite-btn:hover {
+    background: var(--light-gray-translucent);
+    box-shadow: var(--shadow-large);
+}
+
+.favorite-btn:active {
+    transform: translateY(0);
+}
+
+.favorite-btn.favorited {
+    color: var(--dark-red);
+    background: var(--faint-red);
+}
+
+.favorite-btn.favorited:hover {
+    background: var(--light-red-translucent);
+}
+
+.heart-icon {
+    width: 18px;
+    height: 18px;
+    display: block;
+    flex-shrink: 0;
+}
+
+.favorite-text {
+    font-size: 0.9em;
+    line-height: 1;
+}
+
+.empty-list-placeholder {
+    padding: 16px;
+    text-align: center;
+    color: #666;
+    font-style: italic;
+} 
