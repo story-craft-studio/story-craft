@@ -1,0 +1,116 @@
+@import '../../styles/colors.css';
+@import '../../styles/metrics.css';
+
+.passage-card {
+	cursor: default;
+	font-size: 85%;
+	position: absolute;
+	user-select: none;
+}
+
+.passage-card .selectable-card {
+	height: 100%;
+	position: relative;
+}
+
+.passage-card .card {
+	padding: calc(var(--grid-size) / 2);
+	background: var(--passage-color, var(--white)) !important;
+	border: 1px solid var(--passage-border-color, var(--gray)) !important;
+}
+
+.passage-card .card-content {
+	padding: 0;
+}
+
+.passage-card .card-content .placeholder {
+	font-style: italic;
+}
+
+.passage-card h2 {
+	color: var(--black);
+	font-size: 100%;
+	font-weight: normal;
+}
+
+.passage-card .card-content {
+	color: var(--gray);
+	padding: 0;
+	overflow: ellipsis;
+}
+
+.passage-card.empty .card {
+	background: hsla(0, 100%, 100%, 0.33);
+	border: 1px dashed var(--gray);
+	box-shadow: none;
+	backdrop-filter: blur(1px);
+}
+
+.passage-card.empty.selected .card {
+	background: #d2e3fa;
+	border: 1px dashed var(--blue);
+	box-shadow: none;
+}
+
+.compact-passage-cards .passage-card h2 {
+	align-items: center;
+	display: flex;
+	flex-grow: 1;
+	font-size: 160%;
+	justify-content: center;
+	text-align: center;
+	word-break: break-word;
+}
+
+.compact-passage-cards .passage-card .card-content {
+	display: none;
+}
+
+.compact-passage-cards .passage-card .tag-stripe span {
+	border-radius: 4px;
+	height: 8px;
+}
+
+[data-app-theme='dark'] .passage-card.empty .card {
+	background: hsla(0, 100%, 100%, 0.1);
+}
+
+[data-app-theme='dark'] .passage-card.empty.selected .card {
+	background: hsla(212, 90%, 60%, 0.2);
+}
+
+/* Additional dark mode styles for better contrast and readability */
+[data-app-theme='dark'] .passage-card .card {
+	background: var(--passage-color, var(--faint-gray)) !important;
+	border: 1px solid var(--passage-border-color, var(--light-gray)) !important;
+}
+
+[data-app-theme='dark'] .passage-card h2 {
+	color: var(--off-white);
+}
+
+[data-app-theme='dark'] .passage-card .card-content {
+	color: var(--light-gray);
+}
+
+[data-app-theme='dark'] .passage-card .card-content .placeholder {
+	color: var(--gray);
+}
+
+/* Start passage indicator styles */
+.start-passage-indicator {
+	position: absolute;
+	bottom: -10px;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 10;
+}
+
+.start-star {
+	filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+/* Dark mode styles for start passage indicator */
+[data-app-theme='dark'] .start-star {
+	filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.8));
+}

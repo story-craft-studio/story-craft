@@ -1,0 +1,46 @@
+@import '../../../styles/colors.css';
+
+.passage-map {
+	background: 
+		linear-gradient(
+			135deg,
+			rgba(240, 248, 255, 0.8) 0%,      /* Alice blue */
+			rgba(230, 248, 240, 0.8) 25%,     /* Honeydew */
+			rgba(255, 250, 240, 0.8) 50%,     /* Floral white */
+			rgba(248, 248, 255, 0.8) 75%,     /* Ghost white */
+			rgba(245, 255, 250, 0.8) 100%     /* Mint cream */
+		),
+		url('./images/graph-paper-light.svg');
+	background-size: 100px;
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+	min-height: calc(100vh - 2 * var(--control-height));
+	min-width: 100vw;
+
+	transform-origin: top left;
+	will-change: transform;
+}
+
+[data-app-theme="dark"] .passage-map {
+	background: 
+		linear-gradient(
+			135deg,
+			rgba(53, 79, 105, 0.9) 0%,          /* Dark slate blue */
+			rgba(37, 61, 85, 0.9) 25%,         /* Dark blue gray */
+			rgba(21, 37, 53, 0.9) 50%,         /* Charcoal */
+			rgba(17, 39, 61, 0.9) 75%,         /* Dark gray */
+			rgba(7, 24, 41, 0.9) 100%         /* Steel blue */
+		),
+		url('./images/graph-paper-dark.svg');
+	background-size: 100px;
+	backdrop-filter: blur(15px);
+	-webkit-backdrop-filter: blur(15px);
+}
+
+.passage-map .passage-card {
+	will-change: transform;
+}
+
+.passage-map .passage-card.selected {
+	transform: translate(var(--drag-offset-left), var(--drag-offset-top));
+}

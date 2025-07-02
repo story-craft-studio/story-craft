@@ -1,0 +1,154 @@
+.TagsInputFieldWrapper * {
+	margin: 0;
+	padding: 0;
+}
+.TagsInputFieldWrapper html, .TagsInputFieldWrapper body {
+	height: 100%;
+}
+.TagsInputFieldWrapper body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Courier New', Courier, monospace;
+	font-weight: bold;
+}
+.TagsInputFieldWrapper .TagsList {
+	display: flex;
+}
+.TagsInputFieldWrapper .Tags {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.TagsInputFieldWrapper .TaskTags {
+	align-items: center;
+	border: 1px solid #14aaf5;
+	border-radius: 8px;
+	min-height: 38px;
+	padding: 5px;
+	min-width: 1px;
+	width: 700px;
+	flex-wrap: wrap;
+	max-width: 100%;
+}
+.TagsInputFieldWrapper .css-fyq6mk-container {
+	display: flex;
+	flex: 1 1 auto;
+	min-width: 180px;
+	width: auto !important;
+}
+.TagsInputFieldWrapper .Select-option {
+	align-items: center;
+	display: flex;
+}
+.TagsInputFieldWrapper .PopoverReferenceElement {
+	align-items: center;
+	display: flex;
+	flex: 1 1 auto;
+}
+.TagsInputFieldWrapper .ActiveTaskData-content .PopoverReferenceElement {
+	display: flex;
+	flex: 0 0 auto;
+}
+.TagsInputFieldWrapper .TaskTagWithColorSelect {
+	align-items: center;
+	display: flex;
+}
+.TagsInputFieldWrapper .TaskTagItem {
+	margin-bottom: 2px;
+	margin-right: 4px;
+	margin-top: 2px;
+	display: flex;
+	align-items: center;
+	color: #fff;
+	fill: #fff;
+	border-radius: 10px;
+	font-size: 12px;
+	height: 20px;
+	line-height: 20px;
+	padding: 0 8px;
+}
+.TagsInputFieldWrapper .TaskTag-displayName {
+	text-overflow: ellipsis;
+	box-sizing: border-box;
+	display: block;
+	font-weight: 400;
+	max-width: 180px;
+	overflow: hidden;
+	text-align: left;
+	white-space: nowrap;
+	font-size: 12px;
+	height: 20px;
+	line-height: 20px;
+	padding: 0 8px;
+	color: black;
+}
+.TagsInputFieldWrapper .TaskTag-deleteButton {
+	border-radius: 10px;
+	cursor: pointer;
+	font-size: 12px;
+	height: 12px;
+	line-height: 20px;
+	min-height: 12px;
+	min-width: 12px;
+	width: 12px;
+	color: black;
+}
+.TagsInputFieldWrapper .ColorSelectPopUp {
+	align-items: center;
+	background: #fff;
+	border-radius: 4px;
+	box-shadow: 0 0 0 1px #e8ecee, 0 5px 20px 0 rgba(21, 7, 38, 0.08);
+	box-sizing: border-box;
+	color: #151b26;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	padding: 10px;
+	position: relative;
+	width: 241px;
+	z-index: 5000;
+}
+.TagsInputFieldWrapper .ColorItem {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 22px;
+	height: 22px;
+	border-width: 1px;
+	border-color: #fff;
+	border-style: solid;
+	border-radius: 50%;
+	background-color: #fff;
+	cursor: pointer;
+	padding: 2px;
+	transition-property: border-color;
+	transition-duration: 200ms;
+}
+.TagsInputFieldWrapper .ColorItem:hover {
+	border-color: #26d1b9;
+	background-color: #fff;
+}
+.TagsInputFieldWrapper .SelectedColorItem {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 22px;
+	height: 22px;
+	background-color: #fff;
+	border-width: 1px;
+	border-color: #26d1b9;
+	border-style: solid;
+	border-radius: 50%;
+	background-color: #fff;
+	cursor: pointer;
+	padding: 2px;
+	transition-property: border-color;
+	transition-duration: 200ms;
+}
+.TagsInputFieldWrapper .ColorIndicator {
+	border-radius: 50%;
+	height: 18px;
+	width: 18px;
+}
